@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Montserrat:wght@500;600;700&display=swap");
+
+$pink: #ff4093;
+$black: #000;
+$gray: rgba(0, 0, 0, 0.6);
+$white: #fff;
+$background: #e5e5e5;
+$purple: #390f3b;
+$fontFamilytitle: Bitter, serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+body {
+    min-width: 1160px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    background: $background;
+    color: $purple;
+    font-size: 16px;
+    line-height: 45.5px;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title {
+    font-family: $fontFamilytitle;
+    font-size: 40px;
+    line-height: 70px;
+    margin: 0;
+}
+
+.paragraph {
+    font-weight: 500;
+    line-height: 35px;
+    color: $gray;
+}
+
+.subtitle {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 170%;
+}
+
+.color-selection {
+    color: $pink;
+}
+
+.header {
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: flex;
+    }
+
+    &__list {
+        display: flex;
+        margin: 0 -25px;
+    }
+
+    &__item {
+        margin: 0 25px;
+        &:active .header__link {
+            color: $pink;
+        }
+        &:active {
+            list-style-type: disc;
+            color: $pink;
+        }
+    }
+
+    &__link {
+        color: $purple;
+    }
+
+    &__button {
+        color: $pink;
+        font-weight: 500;
+        line-height: 35px;
+        border: 1px solid $pink;
+        border-radius: 5px;
+        padding: 6px 26px;
+    }
+}
+
+.about {
+    background: url(../img/about-background.png) no-repeat;
+    background-position: 607px 110px;
+    padding-top: 153px;
+    padding-bottom: 159px;
+
+    &__digital {
+        line-height: 35px;
+        margin-bottom: 13px;
+        margin-left: 68px;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 53px;
+            height: 2px;
+            background: $purple;
+            position: absolute;
+            top: 10px;
+            left: -67px;
+        }
+    }
+
+    &__title {
+        width: 530px;
+        margin-bottom: 13px;
+    }
+
+    &__paragraph {
+        width: 391px;
+        margin-bottom: 39px;
+    }
+
+    &__button {
+        font-weight: 500;
+        line-height: 35px;
+        padding: 12px 45px;
+        color: $white;
+        background: $pink;
+        border-radius: 5px;
+    }
+}
+
+.decision {
+    background: url(../img/decision-background.png) no-repeat;
+    background-position: 742px 60px;
+    &__title {
+        width: 530px;
+        margin-bottom: 28px;
+    }
+
+    &__paragraph {
+        width: 615px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 615px;
+    }
+
+    &__text {
+    }
+
+    &__separation {
+        width: 608px;
+        height: 1px;
+        background: #c4c4c4;
+        margin-top: 21px;
+        margin-bottom: 22px;
+    }
+}
+
+.advantages {
+    &__title {
+        width: 412px;
+    }
+}
+
+.services {
+    &__list {
+        display: grid;
+        grid-template-columns: 266px 266px 266px 266px;
+        grid-template-rows: 354px;
+        gap: 25px;
+    }
+    &__item {
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        position: relative;
+    }
+    &__subtitle {
+        display: inline-block;
+        border-bottom: 2px solid $pink;
+        margin-left: 20px;
+        margin-top: 157px;
+    }
+    &__paragraph {
+        margin-top: 10px;
+        width: 236px;
+        margin-left: 20px;
+        line-height: 170%;
+    }
+    &__image {  
+        position: absolute;
+        left: 30%;
+        &_logo{
+            top: 35px;
+        }
+        &_site{
+            top: 35px;
+        }
+        &_bot{
+            top: 28px;
+        }
+        &_style{
+            top: 50px;
+        }
+    }
+}
